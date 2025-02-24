@@ -10,7 +10,7 @@ export default function Index({navigation}){
       <Text style={style2.texto_principal}> SISTEMA DE EMPRÉSTIMOS DE OBJETO </Text>
       
       <View>
-        <Button title='Usuários' onPress={()=>navigation.navigate("Usuários")} />
+        <Button title='Usuários' onPress={()=>navigation.navigate("Usuarios")} />
         <Button title='Objetos' onPress={()=>navigation.navigate("Objetos")} />
         <Button title='Categorias' onPress={()=>navigation.navigate("Categorias")} />
       </View>

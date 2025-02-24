@@ -2,7 +2,7 @@ import { View, Text, Button, FlatList } from "react-native";
 import { useEffect, useState } from "react";
 import api from '../config/api'
 
-export default function categorias({navigation}){
+export default function App({navigation}){
 
     const [categorias, listarCategorias] = useState([])
 

@@ -2,12 +2,12 @@ import { View, Text, TextInput, Button } from 'react-native'
 import { useState } from 'react'
 import api from '../config/api'
 
-export default function app({navigation}){
+export default function App({navigation}){
     const [ nome, alterarNome ] = useState("");
-    const [ descricao, alterarDescricao ] = useState("")
+    const [ descricao, alterarDescricao ] = useState("");
 
     const cadastrar = () => {
-        const categoria = {
+        const objeto = {
             "nome" : nome,
             "descricao": descricao
         }

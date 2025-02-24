@@ -18,8 +18,8 @@ export default function App() {
         
         <Stack.Screen name='Index' component={Index}/>
 
-        <Stack.Screen name='Usuários' component={Usuarios}/>
-        <Stack.Screen name='Usuários_cadastrar' component={Usuarios_cadastrar}/>
+        <Stack.Screen name='Usuarios' component={Usuarios}/>
+        <Stack.Screen name='Usuarios_cadastrar' component={Usuarios_cadastrar}/>
 
         <Stack.Screen name='Objetos' component={Objetos}/>
         <Stack.Screen name='Objetos_cadastrar' component={Objetos_cadastrar}/>
