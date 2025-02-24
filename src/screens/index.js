@@ -13,8 +13,6 @@ export default function Index({navigation}){
         <Button title='Usuários' onPress={()=>navigation.navigate("Usuários")} />
         <Button title='Objetos' onPress={()=>navigation.navigate("Objetos")} />
         <Button title='Categorias' onPress={()=>navigation.navigate("Categorias")} />
-        <Button title='Empréstimos' onPress={()=>navigation.navigate("Empréstimos")} />
-        <Button title='Reservas' onPress={()=>navigation.navigate("Reservas")} />
       </View>
 
     </View>
