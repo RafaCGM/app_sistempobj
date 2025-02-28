@@ -16,11 +16,25 @@ export default function App({navigation}){
         })
     }
 
+    const removerCategoria = async (id) => {
+        rota = "/categorias/remover/"+id+"/"
+        await api.delete(rota)
+          .then((response) => { 
+            getCategorias();
+          }).catch((err) => { 
+            if (err.response) { 
+              Alert.alert("Erro", err.response.data.mensagem);
+            } else { 
+              Alert.alert("Erro", "Erro: Tente mais tarde!");
+            }
+          });
+    }
+
     useEffect(()=>{
         getCategorias();
 
     },[]);
-
+    
     return(
     <View>
         <Text> Categorias </Text>
@@ -35,12 +49,28 @@ export default function App({navigation}){
 
             
             <FlatList 
-            data={categorias}
-            keyExtractor={({id})=>id}
-            renderItem={({item})=>(
-                <Text>Nome: {item.nome} || Descrição: {item.descricao}</Text>
-            )}
+                data={categorias}
+                keyExtractor={({id})=>id}
+                renderItem={({item})=>(
+                    <Text>
+
+                        Nome: {item.nome}
+                        ||
+                        <Button title="Editar"
+                                onPress={() => {
+                                    navigation.navigate("Categoria_editar", {id: item.id, nome: item.nome, descricao: item.descricao})
+                                }} 
+                        />
+                        ||
+                        <Button title="Remover"
+                                onPress={() => {
+                                    removerCategoria(item.id)
+                                }}
+                        />
+                    
+                    </Text>
+                )}
             />
     </View>
-    );
+);
 }

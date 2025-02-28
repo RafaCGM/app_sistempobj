@@ -1,4 +1,4 @@
-import { View, Text, Button, FlatList } from "react-native";
+import { View, Text, FlatList } from "react-native";
 import { useEffect, useState } from "react";
 import api from '../config/api'
 
@@ -23,17 +23,8 @@ export default function App({navigation}){
 
     return(
     <View>
-        <Text> Usuários </Text>
-
-        <Button
-                title='Cadastrar'
-                onPress={()=>{
-                    navigation.navigate("Usuarios_cadastrar")
-                }}
-            
-            />
-
-            
+        <Text> Lista de usuários </Text>
+       
             <FlatList 
             data={usuarios}
             keyExtractor={({id})=>id}
@@ -41,6 +32,7 @@ export default function App({navigation}){
                 <Text>Nome: {item.nome} || E-mail: {item.email}</Text>
             )}
             />
+
     </View>
     );
 }
