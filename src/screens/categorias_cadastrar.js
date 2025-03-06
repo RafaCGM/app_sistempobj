@@ -52,8 +52,9 @@ export default function App({navigation}){
                 <Button 
                     title="Cadastrar" 
                     onPress={cadastrar} 
-                    color="#007A33" 
+                    color="#007A33"
                 />
+                
             </View>
         </ImageBackground>
     );
@@ -69,11 +70,11 @@ const style1 = StyleSheet.create({
     },
 
     container: {
-        width: '90%',  // Ajuste do tamanho do container
-        backgroundColor: 'rgba(255, 255, 255, 0.8)', // Fundo semi-transparente para contraste
-        borderRadius: 20, // Arredondamento das bordas
+        width: '90%',
+        backgroundColor: 'rgba(255, 255, 255, 0.8)',
+        borderRadius: 20,
         padding: 20,
-        alignItems: 'center', // Centraliza o conteúdo
+        alignItems: 'center',
     },
 });
 

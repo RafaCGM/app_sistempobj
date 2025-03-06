@@ -1,4 +1,4 @@
-import { Text, View, Button, StyleSheet, TextInput} from 'react-native';
+import { Text, View, Button, StyleSheet, TextInput, ImageBackground} from 'react-native';
 import React, { useState } from 'react'
 import api from "../config/api"
 
@@ -30,35 +30,90 @@ export default function App({route, navigation}) {
   }
   
     return (
-        <View style={estilo.tela}>
-            <Text>EDIÇÃO</Text>
-            
-            <Text>Nome atual: {route.params.nome}</Text>
-            <Text>Novo nome: </Text>
-            <TextInput 
-            onChangeText={onChangeText}
-            
-            />
+      <ImageBackground 
+          source={require("../../assets/ifrn.jpg")} 
+          style={style1.background} 
+          resizeMode="cover"
+      >
+          <View style={style1.container}>
+              <Text style={style2.texto_principal}>Edição de categoria</Text>
+              
+              <Text style={style2.label}>Nome atual: {route.params.nome}</Text>
+              <Text style={style2.label}>Novo nome: </Text>
+              <TextInput 
+                style={style2.input}
+                onChangeText={onChangeText}
+                placeholder="Nome da Categoria"
+                placeholderTextColor="#aaa"
+              />
 
-            <Text>Descrição atual: {route.params.descricao}</Text>
-            <Text>Nova descrição: </Text>
-            <TextInput 
-            onChangeText={onChangeText}
-            
-            />
-            
-            <Button title="Editar"
-            onPress={() => {
-                editar()
-            }} />
-        </View>
+              <Text style={style2.label}>Descrição atual: {route.params.descricao}</Text>
+              <Text style={style2.label}>Nova descrição: </Text>
+              <TextInput 
+                style={style2.input}
+                onChangeText={onChangeText}
+                placeholder="Descrição"
+                placeholderTextColor="#aaa"
+              />
+              
+              <Button title="Editar"
+              onPress={() => {
+                  editar()
+              }} 
+              color="#007A33"
+              />
+
+          </View>
+      </ImageBackground>
     );
 };
 
 
-const estilo = StyleSheet.create({
-    tela: {
-        flex: 1,
-        padding: 20
-    }
-})
+const style1 = StyleSheet.create({
+  background: {
+      flex: 1,
+      width: '100%',
+      height: '100%',
+      justifyContent: 'center',
+      alignItems: 'center',
+  },
+
+  container: {
+      width: '90%',
+      backgroundColor: 'rgba(255, 255, 255, 0.8)',
+      borderRadius: 20,
+      padding: 20,
+      alignItems: 'center',
+  },
+});
+
+const style2 = StyleSheet.create({
+  texto_principal: {
+      fontSize: 22,
+      fontWeight: 'bold',
+      textAlign: 'center',
+      marginBottom: 30,
+      paddingVertical: 10,
+      paddingHorizontal: 20,
+      borderRadius: 8,
+  },
+
+  label: {
+      fontSize: 16,
+      fontWeight: 'bold',
+      textAlign: 'left',
+      marginBottom: 10,
+      width: '100%',
+  },
+
+  input: {
+      width: '100%',
+      padding: 10,
+      fontSize: 16,
+      marginBottom: 20,
+      borderWidth: 1,
+      borderColor: '#ccc',
+      borderRadius: 8,
+      backgroundColor: '#fff',
+  },
+});

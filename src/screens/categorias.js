@@ -42,11 +42,13 @@ export default function App({navigation}){
         >
             <View style={style1.container}>
                 <Text style={style2.texto_principal}>Categorias</Text>
-                
-                <Button
-                    title="Cadastrar"
-                    onPress={() => navigation.navigate("Categoria_cadastrar")}
-                />
+                <View style={style1.buttonWrapper}>
+                    <Button style={style1.buttonStyle}
+                        title="Cadastrar"
+                        onPress={() => navigation.navigate("Categoria_cadastrar")}
+                        color="#007A33"
+                    />
+                </View>
             
                 <FlatList 
                     data={categorias}
@@ -59,12 +61,14 @@ export default function App({navigation}){
                                 <Button 
                                     title="Editar"
                                     onPress={() => navigation.navigate("Categoria_editar", {id: item.id, nome: item.nome, descricao: item.descricao})}
+                                    color="#007A33"
                                 />
                             </View>
                             <View style={style1.buttonWrapper}>
                                 <Button 
                                     title="Remover"
                                     onPress={() => removerCategoria(item.id)}
+                                    color="#c94b4b"
                                 />
                             </View>
                         </View>
@@ -80,16 +84,16 @@ const style1 = StyleSheet.create({
         flex: 1,
         width: '100%',
         height: '100%',
-        justifyContent: 'center', // Centraliza o conteúdo verticalmente
-        alignItems: 'center', // Centraliza o conteúdo horizontalmente
+        justifyContent: 'center',
+        alignItems: 'center',
     },
 
     container: {
-        width: '90%',  // Ajuste o tamanho do container
-        backgroundColor: 'rgba(255, 255, 255, 0.8)', // Fundo branco semi-transparente para contraste
-        borderRadius: 20, // Arredonda as bordas do fundo
-        padding: 20, // Espaçamento interno
-        alignItems: 'center', // Centraliza o conteúdo horizontalmente
+        width: '90%',
+        backgroundColor: 'rgba(255, 255, 255, 0.8)',
+        borderRadius: 20,
+        padding: 20,
+        alignItems: 'center',
     },
 
     itemContainer: {

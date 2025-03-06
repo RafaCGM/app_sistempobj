@@ -38,29 +38,29 @@ const style1 = StyleSheet.create({
     flex: 1,
     width: '100%',
     height: '100%',
-    justifyContent: 'center', // Centraliza o conteúdo verticalmente
-    alignItems: 'center', // Centraliza o conteúdo horizontalmente
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 
   container: {
-    width: '90%',  // Ajuste o tamanho do container
-    backgroundColor: 'rgba(255, 255, 255, 0.8)', // Fundo branco semi-transparente para contraste
-    borderRadius: 20, // Arredonda as bordas do fundo
-    padding: 20, // Espaçamento interno
-    alignItems: 'center', // Centraliza o conteúdo horizontalmente
+    width: '90%',
+    backgroundColor: 'rgba(255, 255, 255, 0.8)',
+    borderRadius: 20,
+    padding: 20,
+    alignItems: 'center',
   },
 
   logoContainer: {
-    marginBottom: 20, // Distância entre logo e o texto
+    marginBottom: 20,
   },
 
   button: {
     width: '100%',
-    marginTop: 20, // Distância entre o texto e os botões
+    marginTop: 20,
   },
 
   buttonWrapper: {
-    marginBottom: 15, // Distância entre os botões
+    marginBottom: 15,
   },
 
   box: {
@@ -74,14 +74,14 @@ const style2 = StyleSheet.create({
     width: 250,
     height: 120,
     resizeMode: 'contain',
-    borderRadius: 30, // Arredonda as bordas da imagem da logo
+    borderRadius: 30,
   },
 
   texto_principal: {
     fontSize: 18,
     fontWeight: 'bold',
     textAlign: 'center',
-    marginBottom: 20, // Distância entre o texto e os botões
-    borderRadius: 8, // Bordas arredondadas no texto
+    marginBottom: 20,
+    borderRadius: 8,
   },
 });
